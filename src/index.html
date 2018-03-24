@@ -35,6 +35,11 @@
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
+  <!-- Import the 2checkout JS library: https://www.2checkout.com/documentation/checkout/inline-checkout
+  Since our example form above is passing all of the required information for an intangible sale, integrating with Inline Checkout is as easy as including our small JavaScript library at the bottom of the page where your checkout form is located:
+  The Inline Checkout JavaScript library will add an iframe to the DOM and hook into any existing form that uses our checkout routine. When the buyer submits the form, our Inline Checkout page will overlay your current checkout page. -->
+  <script src="https://www.2checkout.com/static/checkout/javascript/direct.min.js"></script>
+
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 

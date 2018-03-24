@@ -11,4 +11,126 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <p>
+  	Evento: nombre del evento.<br>
+  	Fecha del evento: Fecha.<br>
+  	Categoria del Evento: Categoria.<br>
+  	Costo de Participacion: Costo.<br>
+  	Lugar: direccion Google Maps.<br>
+  </p>
+  <div>
+  <!--
+	 	<form action='https://www.2checkout.com/checkout/purchase' method='post'>
+	 	<form action='https://sandbox.2checkout.com/checkout/purchase' method='post'> 
+		<input type='hidden' name='sid' value='1303908' />
+		<input type='hidden' name='mode' value='2CO' />
+		<input type='hidden' name='li_0_type' value='product' />
+		<input type='hidden' name='li_0_name' value='invoice123' />
+		<input type='hidden' name='li_0_price' value='25.99' />
+		<input type='hidden' name='card_holder_name' value='Checkout Shopper' />
+		<input type='hidden' name='street_address' value='123 Test Address' />
+		<input type='hidden' name='street_address2' value='Suite 200' />
+		<input type='hidden' name='city' value='Columbus' />
+		<input type='hidden' name='state' value='OH' />
+		<input type='hidden' name='zip' value='43228' />
+		<input type='hidden' name='country' value='USA' />
+		<input type='hidden' name='email' value='example@2co.com' />
+		<input type='hidden' name='phone' value='614-921-2450' />
+		<input name='submit' type='submit' value='Checkout' />
+
+		<button ion-button round (click)="eventPurchase()" type='submit' value='Checkout' name='submit'>Participar</button>
+	
+		</form>	
+		-->
+
+		<form (ngSubmit)="eventPurchase()">
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="sid" name="sid" value="901375518"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="mode" name="mode" value="2CO"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="li_0_type" name="li_0_type" value="product"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="li_0_name" name="li_0_name" value="evento25032018"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="li_0_quantity" name="li_0_quantity" value="1"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="li_0_price" name="li_0_price" value="20"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">			
+				<ion-label>Titular de Tarjeta</ion-label>	
+				<ion-input type="text" [(ngModel)]="card_holder_name" name="card_holder_name" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">		
+				<ion-label>Calle</ion-label>			
+				<ion-input type="text" [(ngModel)]="street_address" name="street_address" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">		
+				<ion-label>Urbanizacion</ion-label>		
+				<ion-input type="text" [(ngModel)]="street_address2" name="street_address2" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">	
+				<ion-label>Distrito</ion-label>			
+				<ion-input type="text" [(ngModel)]="city" name="city" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">	
+				<ion-label>Canton</ion-label>					
+				<ion-input type="text" [(ngModel)]="state" name="state" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">	
+				<ion-label>Postal Code</ion-label>				
+				<ion-input type="number" [(ngModel)]="zip" name="zip" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">	
+				<ion-label>Provincia</ion-label>				
+				<ion-input type="text" [(ngModel)]="provincia" name="provincia" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="true">				
+				<ion-input type="hidden" [(ngModel)]="country" name="country" value="Costa Rica"></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">
+				<ion-label>Email</ion-label>
+				<ion-input type="email" [(ngModel)]="email" name="email" value=""></ion-input>
+			</ion-item>
+
+			<ion-item [hidden]="false">
+				<ion-label>Phone</ion-label>
+				<ion-input type="number" [(ngModel)]="phone" name="phone" value=""></ion-input>
+			</ion-item>
+
+			<!--
+			<ion-item>
+				<ion-label>Todo</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.title" name="title"></ion-input>
+			</ion-item>
+
+			<ion-item>
+        <ion-label>Description</ion-label>
+        <ion-textarea [(ngModel)]="todo.description" name="description"></ion-textarea>
+      </ion-item>
+			-->
+			<button ion-button round type='submit' value='Checkout' name='submit'>Participar</button>
+		</form>
+
+  </div>
 </ion-content>
